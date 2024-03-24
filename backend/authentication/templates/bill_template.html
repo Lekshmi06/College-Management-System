@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Payment Bill</title>
+    <style>
+        /* Define your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("./logo.png"); /* Add the URL of your logo image */
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat; /* Ensure only one logo is displayed */
+            background-color: #f5f5f5; /* Light color */
+            opacity: 0.9; /* Adjust opacity as needed */
+        }
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9); /* White overlay for better readability */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .date {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .bill-info p {
+            margin: 5px 0;
+        }
+        .items {
+            margin-bottom: 20px;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: right;
+        }
+        .signature {
+            width: 150px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <div class="header">
+                <h1>Student Payment Bill</h1>
+            </div>
+            <div class="date">
+                <p>Date: {{ payment_date }}</p>
+            </div>
+            <div class="bill-info">
+                <p><strong>Student Name:</strong> {{ student_name }}</p>
+                <p><strong>Admission Number:</strong> {{ admission_number }}</p>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <span>Semester Fee:</span>
+                    <span>{{ semester_fee }}</span>
+                </div>
+                <div class="item">
+                    <span>Bus Fee:</span>
+                    <span>{{ bus_fee_amount }}</span>
+                </div>
+                <div class="item">
+                    <span>Fine:</span>
+                    <span>{{ fine_amount }}</span>
+                </div>
+            </div>
+            <div class="total">
+                <span>Total Amount:</span>
+                <span>{{ total_amount }}</span>
+            </div>
+            <div class="footer">
+                <div class="date">
+                    <p>Abcd College Administration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
