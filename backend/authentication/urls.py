@@ -30,6 +30,4 @@ urlpatterns = [
    path('teacher_student/<int:teacher_id>/', StudentsAssignedToTeacher.as_view(), name = "teacher_student"), 
    path('assignments/<student_id>/', AssignmentDetailAPIView.as_view(), name='assignment-detail'),
    path('stdt_id/<int:pk>/', Stdt_id.as_view(), name = "stdt_id"),
-   
-
 ]
